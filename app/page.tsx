@@ -1,7 +1,10 @@
+"use client";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import styles from "./page.module.scss";
 
 const Home = () => {
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <div className={styles.container__onBoarding}>
@@ -16,6 +19,8 @@ const Home = () => {
         <Button
           variant={"outline"}
           className="w-full bg-transparent text-orange-500 border-orange-400 hover:bg-orange-50 hover:text-orange-500"
+          onClick={() => router.push("/create")}
+          // ssr이기 때문에 클릭이벤트와 같은 이벤트를 감지하기 어렵다. => use client명시
         >
           Add New Page
         </Button>
