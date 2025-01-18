@@ -62,7 +62,7 @@
   }
   &__body {
     display: flex;
-    align-items: center;
+    align-items: flex-start; //TODO: 추후에 수정 예정
     justify-content: center;
 
     width: 100%;

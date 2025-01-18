@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import styles from "./BasicBoard.module.scss";
 import { ChevronUp } from "lucide-react";
 import LabelCalender from "../calender/LabelCalender";
+import MarkdownDialog from "../dialog/MarkdownDialog";
 
 const BasicBoard = () => {
   return (
@@ -40,7 +41,9 @@ const BasicBoard = () => {
           </Button>
         </div>
       </div>
-      <div className={styles.container__footer}></div>
+      <div className={styles.container__footer}>
+        <MarkdownDialog />
+      </div>
     </div>
   );
 };
